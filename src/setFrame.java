@@ -253,15 +253,4 @@ public class setFrame {
         maintFrame.add(panel2, BorderLayout.CENTER);
     }
 
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                setFrame running = new setFrame();
-                running.prepareGUI();
-                //To change body of generated methods, choose Tools | Templates.
-            }
-        });
-    }
-
 }
