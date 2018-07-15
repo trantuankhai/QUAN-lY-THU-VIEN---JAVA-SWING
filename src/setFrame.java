@@ -84,7 +84,7 @@ public class setFrame {
         panel2.setLayout(new BorderLayout());
         //  panel2.setBackground(Color.BLUE);
         btnAdd = new JButton("Thêm");
-        btnEdit = new JButton("Xửa");
+        btnEdit = new JButton("Sửa");
         btnDelete = new JButton("Xóa");
         btnSave = new JButton("Lưu");
         btnIgnore = new JButton("Bỏ Qua");
