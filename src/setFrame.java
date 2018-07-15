@@ -2,6 +2,7 @@
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
@@ -56,11 +57,12 @@ public class setFrame {
         maintFrame.setLocationRelativeTo(null);
         maintFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         maintFrame.setVisible(true);
-        // SET THÔNG TIN CHO PHẦN BÊN TAY TRÁI
+        // SET THÔNG TIN CHO PHẦN BÊN TRÁI
         panel1 = new JPanel();
         panel1.setSize(200, 1000);
         panel1.setLayout(new BorderLayout());
         ckbOnlyShowThemeBook = new JCheckBox("Chỉ Hiện Thị Chủ Đề Có Sách");
+        ckbOnlyShowThemeBook.setFont(new Font("Tahoma", 4, 15));
         tbl1 = new JTable();
         jscp1 = new JScrollPane();
         tbl1.setModel(new DefaultTableModel(new Object[][]{},
@@ -78,7 +80,7 @@ public class setFrame {
         panel1.add(panel1_2, BorderLayout.CENTER);
         panel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
-        //SET THÔNG TIN CHO PHẦN BÊN TAY PHẢI
+        //SET THÔNG TIN CHO PHẦN BÊN  PHẢI
         panel2 = new JPanel();
         //   panel2.setSize(800, 1000);
         panel2.setLayout(new BorderLayout());
@@ -135,16 +137,16 @@ public class setFrame {
         panel2_1.add(btnIgnore);
         panel2_2 = new JPanel(new GridBagLayout());
         gbc = new GridBagConstraints();
-        gbc.weightx = 1000;
+        gbc.weightx = 2.5;
+        gbc.weighty = 2.5;
         gbc.insets = new Insets(10, 10, 10, 10);
-        //SET ROW 1 
         gbc.fill = GridBagConstraints.HORIZONTAL;
+        //SET ROW 1 
         gbc.gridx = 0;
         gbc.gridy = 0;
         panel2_2.add(lblBookTheme, gbc);
         gbc.gridx = 1;
         gbc.gridy = 0;
-       // gbc.gridwidth=1000;
         panel2_2.add(cboBookTheme, gbc);
         //SET ROW 2
         gbc.gridx = 0;
@@ -162,7 +164,6 @@ public class setFrame {
         gbc.gridx = 4;
         gbc.gridy = 1;
         //SET ROW 3
-        // panelRow3 = new JPanel(new GridLayout(1, 2));
         gbc.gridx = 0;
         gbc.gridy = 2;
         panel2_2.add(lblTitle, gbc);
@@ -170,7 +171,6 @@ public class setFrame {
         gbc.gridy = 2;
         panel2_2.add(tfTitle, gbc);
         //SET ROW 4
-        // panelRow4 = new JPanel(new GridLayout(1, 2));
         gbc.gridx = 0;
         gbc.gridy = 3;
         panel2_2.add(lblAuthor, gbc);
@@ -178,7 +178,6 @@ public class setFrame {
         gbc.gridy = 3;
         panel2_2.add(tfAuthor, gbc);
         //SET ROW 5
-        //panelRow5 = new JPanel(new GridLayout(1, 6));
         gbc.gridx = 0;
         gbc.gridy = 4;
         panel2_2.add(lblYear, gbc);
@@ -198,7 +197,6 @@ public class setFrame {
         gbc.gridy = 4;
         panel2_2.add(tfPrice, gbc);
         //SET ROW 6
-        //     panelRow4 = new JPanel(new GridLayout(1, 2));;
         gbc.gridx = 0;
         gbc.gridy = 5;
         panel2_2.add(lblRecord, gbc);
@@ -230,18 +228,6 @@ public class setFrame {
         gbc.gridx = 3;
         gbc.gridy = 6;
         panel2_2.add(btnxuat, gbc, GridBagConstraints.SOUTHEAST);
-        // SET PANEL2_2
-//
-//        panel2_2.add(panelRow1);
-//        panel2_2.add(panelRow2);
-//        panel2_2.add(panelRow3);
-//        panel2_2.add(panelRow4);
-//        panel2_2.add(panelRow5);
-//         panel2_2.add(panelRow3);
-//        panel2_2.add(cboBookTheme);
-//        panel2_2.add(lblBookCode);
-//        panel2_2.add(tfBookCode);
-//        SET PANNEL2_3
         panel2_3 = new JPanel(new BorderLayout());
         panel2_3.add(jscp2);
         //ADD TO PANEL2 
@@ -251,6 +237,17 @@ public class setFrame {
 // ADD CÁC THÔNG TIN VÀO MAINT
         maintFrame.add(panel1, BorderLayout.WEST);
         maintFrame.add(panel2, BorderLayout.CENTER);
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                setFrame running = new setFrame();
+                running.prepareGUI();
+                //To change body of generated methods, choose Tools | Templates.
+            }
+        });
     }
 
 }
