@@ -1,13 +1,10 @@
 
 import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.Insets;
-import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
@@ -19,7 +16,6 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
-import javax.swing.plaf.DimensionUIResource;
 import javax.swing.table.DefaultTableModel;
 
 /*
@@ -239,15 +235,5 @@ public class setFrame {
         maintFrame.add(panel2, BorderLayout.CENTER);
     }
 
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                setFrame running = new setFrame();
-                running.prepareGUI();
-                //To change body of generated methods, choose Tools | Templates.
-            }
-        });
-    }
 
 }
